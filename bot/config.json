@@ -186,8 +186,9 @@
     "trombone": {
       "name": "Trombone Hero",
       "description": "Wah wah WAH WAH",
+      "emoji": "80b2f3b471f6d01821b1b3eda515e0a4",
       "variants": {
-        "Through the Fire and Flames": "ttfaf.ogg"
+        "ttfaf": "ttfaf.ogg"
       }
     }
   }
