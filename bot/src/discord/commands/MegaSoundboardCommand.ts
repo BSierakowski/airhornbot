@@ -52,7 +52,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
           label: soundVariantNames[i],
           custom_id: JSON.stringify({
             name: "play",
-            soundName: sound,
+            soundName: includedSounds[i],
             soundVariant: soundVariantNames[i].toLowerCase()
           })
         });
