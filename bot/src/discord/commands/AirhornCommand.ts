@@ -91,6 +91,7 @@ export class AirhornCommand extends DiscordCommand {
       }
     ]);
     console.log(sound.sound, sound.variant, sound.variantFile);
+    console.log(JSON.stringify(sound));
 
     if (sound.sound == "roulette") {
       var space = Math.random(5);
