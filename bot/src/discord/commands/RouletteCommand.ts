@@ -91,17 +91,14 @@ export class RouletteCommand extends DiscordCommand {
                 soundName: sound.sound,
                 soundVariant: sound.variant
               }),
-              emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
-                id: String(config.sounds[this.name].emoji)
-              } : {
-                id: String(configSecrets.discord.emojis.airhorn)
+              emoji: {
+                id: String("847138944264044554")
               }
             }
           ]
         }
       ]);
 
-      console.log(`Playing ${sound.sound}, ${sound.variant}`)
       // Don't await this, play the sound ASAP
       trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 
@@ -111,7 +108,7 @@ export class RouletteCommand extends DiscordCommand {
     else {
       var sound = ttfaf;
 
-      discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true, [
+      discordCommandResponder.sendBackMessage(`You rolled a six!!!`, true, [
         {
           type: 1,
           components: [
@@ -124,17 +121,14 @@ export class RouletteCommand extends DiscordCommand {
                 soundName: sound.sound,
                 soundVariant: sound.variant
               }),
-              emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
-                id: String(config.sounds[this.name].emoji)
-              } : {
-                id: String(configSecrets.discord.emojis.airhorn)
+              emoji: {
+                id: String("80b2f3b471f6d01821b1b3eda515e0a4")
               }
             }
           ]
         }
       ]);
 
-      console.log(`Playing ${sound.sound}, ${sound.variant}`)
       // Don't await this, play the sound ASAP
       trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 

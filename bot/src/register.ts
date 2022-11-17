@@ -81,6 +81,27 @@ const guildId = specifiedCommandArgs[1] || undefined;
     ]
   });
 
+  commands.push({
+    name: "megasoundboard",
+    description: "Show a MEGA soundboard.",
+    // options: [
+    //   {
+    //     name: "sound",
+    //     description: "Choose the sound.",
+    //     required: false,
+    //     type: 3,
+    //     choices: Object.entries(config.sounds).map((sound: [string, {
+    //       name: string;
+    //     }]) => {
+    //       return {
+    //         name: sound[1].name,
+    //         value: sound[0]
+    //       };
+    //     })
+    //   }
+    // ]
+  });
+
   // roulette command
   commands.push({
     name: "roulette",
