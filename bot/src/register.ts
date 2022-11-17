@@ -45,7 +45,7 @@ const guildId = specifiedCommandArgs[1] || undefined;
     console.log(sound[1].name);
 
     if (sound[1].name == "Roulette") {
-      space = Math.random(5)
+      var space = Math.random(5);
 
       if (space < 6) {
         return {
