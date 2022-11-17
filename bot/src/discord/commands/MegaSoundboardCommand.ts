@@ -50,8 +50,38 @@ export class MegaSoundboardCommand extends DiscordCommand {
     var sound = "aussie"
     const buttons: DiscordComponent[] = [];
     const soundVariantNames = soundVariants.get(sound) || [];
+    const soundEntries = config.sounds;
+    // Object.entries(config.sounds).map((sound: [string, {
+    //   name: string,
+    //   description: string,
+    //   emoji: string | undefined,
+    //   variants: {
+    //     [key: string]: string
+    //   }
+    // }]) => {
+    //   return {
+    //     name: sound[0],
+    //     description: sound[1].name + ": " + sound[1].description,
+    //     options: [
+    //       {
+    //         name: "variant",
+    //         description: "Spice it up with some different sounds!",
+    //         required: false,
+    //         type: 3,
+    //         choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
+    //           return {
+    //             name: soundVariant[0],
+    //             value: soundVariant[0].toLowerCase()
+    //           };
+    //         })
+    //       }
+    //     ]
+    //   };
+    // });
+
 
     console.log(`soundVariantNames: ${soundVariantNames},  ${soundVariantNames.length}`);
+    console.log(`soundEntries: ${soundEntries});
     for (let i = 0; i < soundVariantNames.length; i++) {
       console.log(soundVariantNames[i]);
       buttons.push({
