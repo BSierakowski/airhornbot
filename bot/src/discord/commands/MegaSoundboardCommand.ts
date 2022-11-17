@@ -38,8 +38,6 @@ export class MegaSoundboardCommand extends DiscordCommand {
 
     const buttons: DiscordComponent[] = [];
 
-    console.log(`config.sounds: ${config.sounds}`);
-
     Object.entries(config.sounds).map((sound: [string, {
       name: string,
       description: string,
@@ -48,10 +46,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
         [key: string]: string
       }
     }]) => {
-      var soundVariantNames = soundVariants.get(sound) || [];
-      console.log(`sound: ${sound}`);
-      console.log(`soundKeys: ${Object.keys(sound)}`);
-      console.log(`soundName0: ${sound[0]}`);
+      var soundVariantNames = soundVariants.get(sound[0]) || [];
       console.log(`soundVariantNames: ${soundVariantNames}`);
 
       for (let i = 0; i < soundVariantNames.length; i++) {
