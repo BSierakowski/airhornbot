@@ -40,23 +40,26 @@ export class MegaSoundboardCommand extends DiscordCommand {
     const includedSounds = ["aussie", "clogg"];
     var soundVariantNames = [];
 
-    for (let o = 0; o < includedSounds.length; o++) {
+    for (let i = 0; i < includedSounds.length; i++) {
       var soundVariantNames = soundVariants.get(includedSounds[i]);
 
-      for (let i = 0; i < soundVariantNames.length; i++) {
-        console.log(`sound added: ${includedSounds[i]}, ${soundVariantNames[i].toLowerCase()}`);
-        buttons.push({
-          type: 2,
-          style: 1,
-          label: soundVariantNames[i],
-          custom_id: JSON.stringify({
-            name: "play",
-            soundName: includedSounds[i],
-            soundVariant: soundVariantNames[i].toLowerCase()
-          })
-        });
-      }
+      Array.entries(soundVariantNames).map( (soundVariantName) =>
+        {
+          console.log(`sound added: ${includedSounds[i]}, ${soundVariantName.toLowerCase()}`);
+          buttons.push({
+            type: 2,
+            style: 1,
+            label: soundVariantName,
+            custom_id: JSON.stringify({
+              name: "play",
+              soundName: includedSounds[i],
+              soundVariant: soundVariantName.toLowerCase()
+            })
+          });
+        }
+      )
     }
+
 
     // Object.entries(config.sounds).map((sound: [string, {
     //   name: string,
