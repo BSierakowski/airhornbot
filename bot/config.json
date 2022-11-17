@@ -22,7 +22,7 @@
         "Truck": "airhorn_truck.ogg"
       }
     },
-    "video-games": {
+    "videogames": {
       "name": "Among Us",
       "description": "That's a little sus...",
       "emoji": "847131936845725696",
@@ -44,7 +44,7 @@
       "description": "Wow!",
       "emoji": "847141775188688966",
       "variants": {
-        "wow": "owen_wilson.ogg",
+        "wow": "wow.ogg",
         "Gavel": "gavel.opus"
       }
     },
