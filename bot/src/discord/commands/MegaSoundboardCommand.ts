@@ -37,7 +37,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
     }
 
     const buttons: DiscordComponent[] = [];
-    const includedSounds: ["aussie", "clogg"];
+    const includedSounds = ["aussie", "clogg"];
     var soundVariantNames = [];
 
     for (let i = 0; i < includedSounds.length; i++) {
