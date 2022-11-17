@@ -149,6 +149,14 @@
         "Quack": "duck_quack.opus"
       }
     },
+    "roulette": {
+      "name": "Roulette",
+      "description": "roulette",
+      "emoji": "847138944264044554",
+      "variants": {
+        "roulette": "duck_quack.opus"
+      }
+    },
     "villager": {
       "name": "Minecraft Villager",
       "description": "Hrmmm",
