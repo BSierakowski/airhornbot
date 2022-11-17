@@ -35,17 +35,19 @@ export class MegaSoundboardCommand extends DiscordCommand {
       return discordCommandResponder.sendBackMessage("The bot was not found in the guild.", false);
     }
     // Run the command
-    let sound: string | undefined;
-    if (interaction.data.options) {
-      interaction.data.options.forEach((option: InteractionCommandOption) => {
-        if (option.name === "sound") {
-          sound = String(option.value).toLowerCase();
-        }
-      });
-    }
-    if (!sound || !soundVariants.has(sound)) {
-      return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
-    }
+    // let sound: "string | undefined;"
+    // if (interaction.data.options) {
+    //   interaction.data.options.forEach((option: InteractionCommandOption) => {
+    //     if (option.name === "sound") {
+    //       sound = String(option.value).toLowerCase();
+    //     }
+    //   });
+    // }
+    // if (!sound || !soundVariants.has(sound)) {
+    //   return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
+    // }
+
+    var sound = "aussie"
     const buttons: DiscordComponent[] = [];
     const soundVariantNames = soundVariants.get(sound) || [];
 
