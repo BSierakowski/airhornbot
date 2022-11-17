@@ -69,8 +69,8 @@ export class AirhornCommand extends DiscordCommand {
     }
 
     if (sound.sound == "roulette") {
-      var min = Math.ceil(1);
-      var max = Math.floor(6);
+      const min = Math.ceil(1);
+      const max = Math.floor(6);
       var space = Math.floor(Math.random() * (max - min + 1) + min);
       console.log("space");
       console.log(space);
@@ -79,7 +79,7 @@ export class AirhornCommand extends DiscordCommand {
         {
           console.log("space less than 5");
           const sound = getSound("quack", "quack");
-          var responseMessage = `You rolled ${space}!`
+          var responseMessage = "You rolled less than 6!"
 
           discordCommandResponder.sendBackMessage(responseMessage, true, [
             {
@@ -108,7 +108,7 @@ export class AirhornCommand extends DiscordCommand {
         {
           const sound = getSound("trombone", "ttfaf");
           console.log("Else! 5!");
-          var responseMessage = `You rolled ${space}!`
+          var responseMessage = "You rolled six! Legend!!!"
 
           discordCommandResponder.sendBackMessage(responseMessage, true, [
             {
