@@ -62,31 +62,11 @@ export class AirhornCommand extends DiscordCommand {
     if (!botGuildMember.permissionsIn(fetchedVoiceChannel).has("CONNECT")) {
       return discordCommandResponder.sendBackMessage("The bot could not connect to the voice channel.", false);
     }
-
-    const min = Math.ceil(1);
-    const max = Math.floor(6);
-    var space = Math.floor(Math.random() * (max - min + 1) + min);
-
-    if (this.name == "roulette") {
-      if (space < 5) {
-        var sound = getSound("quack", "quack");
-      }
-      else {
-        var sound = getSound("trombone", "ttfaf");
-      }
-    }
-    else {
-      console.log("this.name");
-      console.log(this.name);
-      console.log("soundVariant");
-      console.log(soundVariant);
-      var sound = getSound(this.name, soundVariant);
-    }
-
-
+    const sound = getSound(this.name, soundVariant);
     if (!sound) {
       return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
     }
+    // Don't await this, play the sound ASAP
 
     discordCommandResponder.sendBackMessage("Dispatching sound...", true, [
       {
@@ -110,10 +90,10 @@ export class AirhornCommand extends DiscordCommand {
         ]
       }
     ]);
+    console.log(sound.sound, sound.variant, sound.variantFile);
+    trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 
-  // Don't await this, play the sound ASAP
-  trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
-
-  // Dispatch the sound
-  enqueueSound(voiceChannel, sound.variantFile);
+    // Dispatch the sound
+    enqueueSound(voiceChannel, sound.variantFile);
+  }
 }
