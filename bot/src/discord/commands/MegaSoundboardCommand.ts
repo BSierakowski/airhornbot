@@ -1,6 +1,6 @@
 import {DiscordCommand} from "../DiscordCommand";
 import {Client} from "discord.js-light";
-import {config} from "./utils/Configuration";
+import {config} from "../../utils/Configuration";
 import {configSecrets} from "../../utils/ConfigurationSecrets";
 import {
   CommandInteraction,
