@@ -10,6 +10,7 @@ import {AirhornMetaCommand} from "./discord/commands/AirhornMetaCommand";
 import {DiscordButton} from "./discord/DiscordButton";
 import {PlayButton} from "./discord/buttons/PlayButton";
 import {SoundboardCommand} from "./discord/commands/SoundboardCommand";
+import {RouletteCommand} from "./discord/commands/RouletteCommand";
 
 export class AirhornBot {
 
@@ -48,6 +49,7 @@ export class AirhornBot {
     this.registerCommand(new AirhornCommand("random"));
     this.registerCommand(new AirhornMetaCommand());
     this.registerCommand(new SoundboardCommand());
+    this.registerCommand(new RouletteCommand());
     // Register the buttons
     this.registerButton(new PlayButton());
   }

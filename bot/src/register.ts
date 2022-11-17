@@ -81,6 +81,26 @@ const guildId = specifiedCommandArgs[1] || undefined;
     ]
   });
 
+  // roulette command
+  commands.push({
+    name: "roulette",
+    description: "Spin the wheel!",
+    // options: [
+    //   {
+    //     name: "variant",
+    //     description: "Spice it up with some different sounds!",
+    //     required: false,
+    //     type: 3,
+    //     choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
+    //       return {
+    //         name: soundVariant[0],
+    //         value: soundVariant[0].toLowerCase()
+    //       };
+    //     })
+    //   }
+    // ]
+  });
+
   // random command (this shouldn't be added in the config)
   commands.push({
     name: "random",
