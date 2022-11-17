@@ -50,7 +50,6 @@ export class MegaSoundboardCommand extends DiscordCommand {
 
     var sound = "aussie"
     const buttons: DiscordComponent[] = [];
-    const soundVariantNames = soundVariants.get(sound) || [];
     const soundEntries = config.sounds.keys;
     // Object.entries(config.sounds).map((sound: [string, {
     //   name: string,
@@ -83,28 +82,32 @@ export class MegaSoundboardCommand extends DiscordCommand {
 
     console.log(`soundVariantNames: ${soundVariantNames},  ${soundVariantNames.length}`);
     console.log(`soundEntries: ${soundEntries}`);
-    for (let i = 0; i < soundVariantNames.length; i++) {
-      console.log(soundVariantNames[i]);
+
+    for (let i = 0; i < soundEntries.length; i++) {
+      var soundVariantNames = soundVariants.get(soundEntries[i]) || [];
+    }
+      for (let i = 0; i < soundVariantNames.length; i++) {
+        console.log(soundVariantNames[i]);
+        buttons.push({
+          type: 2,
+          style: 1,
+          label: soundVariantNames[i],
+          custom_id: JSON.stringify({
+            name: "play",
+            soundName: sound,
+            soundVariant: soundVariantNames[i].toLowerCase()
+          })
+        });
+      }
       buttons.push({
         type: 2,
-        style: 1,
-        label: soundVariantNames[i],
+        style: 3,
+        label: "Random",
         custom_id: JSON.stringify({
           name: "play",
-          soundName: sound,
-          soundVariant: soundVariantNames[i].toLowerCase()
+          soundName: sound
         })
       });
-    }
-    buttons.push({
-      type: 2,
-      style: 3,
-      label: "Random",
-      custom_id: JSON.stringify({
-        name: "play",
-        soundName: sound
-      })
-    });
     const fullComponents = convertButtonsIntoButtonGrid(buttons);
     return discordCommandResponder.sendBackMessage("Here's the menu for that sound.", true, fullComponents);
   }
