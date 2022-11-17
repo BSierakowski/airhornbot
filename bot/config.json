@@ -152,6 +152,23 @@
       "variants": {
         "ttfaf": "ttfaf.ogg"
       }
+    },
+    "comms": {
+      "name": "Hardcomming",
+      "description": "What it sounds like when your boyfriend is on discord",
+      "emoji": "1035270808488128643",
+      "variants": {
+        "3dudescoming": "3dudescoming.ogg",
+        "atemyshot": "atemyshot.ogg",
+        "fdudebuilding": "fdudebuilding.ogg",
+        "gimmiecheeks": "gimmiecheeks.ogg",
+        "hesinside": "hesinside.ogg",
+        "imcomingimcoming": "imcomingimcoming.ogg",
+        "onmeonme": "onmeonme.ogg",
+        "ontoponbottom": "ontoponbottom.ogg",
+        "rotating": "rotating.ogg",
+        "twomoreguyscominin": "twomoreguyscominin.ogg"
+      }
     }
   }
 }
