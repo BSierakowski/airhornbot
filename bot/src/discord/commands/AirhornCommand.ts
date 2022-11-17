@@ -62,7 +62,7 @@ export class AirhornCommand extends DiscordCommand {
     if (!botGuildMember.permissionsIn(fetchedVoiceChannel).has("CONNECT")) {
       return discordCommandResponder.sendBackMessage("The bot could not connect to the voice channel.", false);
     }
-    const sound = getSound(this.name, soundVariant);
+    var sound = getSound(this.name, soundVariant);
 
     if (!sound) {
       return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
@@ -72,14 +72,15 @@ export class AirhornCommand extends DiscordCommand {
     const max = Math.floor(6);
     var space = Math.floor(Math.random() * (max - min + 1) + min);
 
-    if (sound.sound == "roulette") {
+    if (sound.sound == "roulette")
+    {
       console.log("space");
       console.log(space);
 
       if (space < 5)
       {
         console.log("space less than 5");
-        const sound = getSound("quack", "quack");
+        var sound = getSound("quack", "quack");
         // var responseMessage =
 
         discordCommandResponder.sendBackMessage("You rolled less than six!", true, [
@@ -112,7 +113,7 @@ export class AirhornCommand extends DiscordCommand {
       }
       else
       {
-        const sound = getSound("trombone", "ttfaf");
+        var sound = getSound("trombone", "ttfaf");
         console.log("Else! 5!");
         // var responseMessage =
 
@@ -139,11 +140,6 @@ export class AirhornCommand extends DiscordCommand {
           }
         ]);
       }
-      // Don't await this, play the sound ASAP
-      trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
-
-      // Dispatch the sound
-      enqueueSound(voiceChannel, sound.variantFile);
     }
     else
     {
@@ -170,16 +166,11 @@ export class AirhornCommand extends DiscordCommand {
           ]
         }
       ]);
-
-      // Don't await this, play the sound ASAP
-      trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
-
-      // Dispatch the sound
-      enqueueSound(voiceChannel, sound.variantFile);
     }
 
+  // Don't await this, play the sound ASAP
+  trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 
-
-
-  }
+  // Dispatch the sound
+  enqueueSound(voiceChannel, sound.variantFile);
 }
