@@ -38,6 +38,8 @@ export class MegaSoundboardCommand extends DiscordCommand {
 
     const buttons: DiscordComponent[] = [];
 
+    console.log(`config.sounds: ${config.sounds}`);
+
     Object.entries(config.sounds).map((sound: [string, {
       name: string,
       description: string,
@@ -47,6 +49,8 @@ export class MegaSoundboardCommand extends DiscordCommand {
       }
     }]) => {
       var soundVariantNames = soundVariants.get(sound) || [];
+      console.log(`sound: ${sound}`);
+      console.log(`soundVariantNames: ${soundVariantNames}`);
 
       for (let i = 0; i < soundVariantNames.length; i++) {
         console.log(`soundVariantNames[i]: ${soundVariantNames[i]}`);
@@ -61,16 +65,17 @@ export class MegaSoundboardCommand extends DiscordCommand {
           })
         });
       }
-      buttons.push({
-        type: 2,
-        style: 3,
-        label: "Random",
-        custom_id: JSON.stringify({
-          name: "play",
-          soundName: sound
-        })
-      });
     }
+
+    // buttons.push({
+    //   type: 2,
+    //   style: 3,
+    //   label: "Random",
+    //   custom_id: JSON.stringify({
+    //     name: "play",
+    //     soundName: sound
+    //   })
+    // });
 
     const fullComponents = convertButtonsIntoButtonGrid(buttons);
     return discordCommandResponder.sendBackMessage("Here's the menu for that sound.", true, fullComponents);
