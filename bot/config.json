@@ -95,7 +95,9 @@
       "description": "Quack, quack, quack",
       "emoji": "847138944264044554",
       "variants": {
-        "Quack": "duck_quack.opus"
+        "Quack": "duck_quack.opus",
+        "Quack-chaos": "quackchaos.ogg",
+        "Quack-spam": "quackspam.ogg"
       }
     },
     "roulette": {
