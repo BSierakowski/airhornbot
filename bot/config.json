@@ -105,7 +105,7 @@
       "variants": {
         "default": "duck_quack.opus",
         "duck": "duck_quack.opus",
-        "ttfaf": "ttfaf.opus"
+        "ttfaf": "ttfaf.ogg"
       }
     },
     "aussie": {
