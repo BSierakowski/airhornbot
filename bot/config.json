@@ -44,7 +44,7 @@
       "description": "Wow!",
       "emoji": "847141775188688966",
       "variants": {
-        "wow": "owen_wilson.ogg"
+        "wow": "owen_wilson.ogg",
         "Gavel": "gavel.opus"
       }
     },
@@ -105,7 +105,7 @@
       "variants": {
         "default": "duck_quack.opus",
         "duck": "duck_quack.opus",
-        "ttfaf": "ttfaf.opus",
+        "ttfaf": "ttfaf.opus"
       }
     },
     "aussie": {
