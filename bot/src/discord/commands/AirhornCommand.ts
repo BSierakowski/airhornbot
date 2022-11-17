@@ -79,9 +79,9 @@ export class AirhornCommand extends DiscordCommand {
         {
           console.log("space less than 5");
           const sound = getSound("quack", "quack");
-          var responseMessage = "You rolled less than 6!"
+          // var responseMessage =
 
-          discordCommandResponder.sendBackMessage(responseMessage, true, [
+          discordCommandResponder.sendBackMessage("You rolled less than 6!", true, [
             {
               type: 1,
               components: [
@@ -108,9 +108,9 @@ export class AirhornCommand extends DiscordCommand {
         {
           const sound = getSound("trombone", "ttfaf");
           console.log("Else! 5!");
-          var responseMessage = "You rolled six! Legend!!!"
+          // var responseMessage =
 
-          discordCommandResponder.sendBackMessage(responseMessage, true, [
+          discordCommandResponder.sendBackMessage("You rolled six! Legend!!!", true, [
             {
               type: 1,
               components: [
