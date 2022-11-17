@@ -40,7 +40,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
     const includedSounds = ["aussie", "clogg"];
     var soundVariantNames = [];
 
-    for (let i = 0; i < includedSounds.length; i++) {
+    for (let o = 0; o < includedSounds.length; o++) {
       var soundVariantNames = soundVariants.get(includedSounds[i]);
 
       for (let i = 0; i < soundVariantNames.length; i++) {
