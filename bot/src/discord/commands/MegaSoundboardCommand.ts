@@ -51,7 +51,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
     var sound = "aussie"
     const buttons: DiscordComponent[] = [];
     const soundVariantNames = soundVariants.get(sound) || [];
-    const soundEntries = config.sounds;
+    const soundEntries = config.sounds.keys;
     // Object.entries(config.sounds).map((sound: [string, {
     //   name: string,
     //   description: string,
