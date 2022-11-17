@@ -170,6 +170,37 @@
         "rotating": "rotating.ogg",
         "twomoreguyscominin": "twomoreguyscominin.ogg"
       }
+    },
+    "vines": {
+      "name": "Vines",
+      "description": "Lets pour one out for the homies",
+      "emoji": "1035270808488128643",
+      "variants": {
+        "begone": "bgone-thot.opus",
+        "burger": "burger.opus",
+        "crippling-depression": "crippling-depression.opus",
+        "deez": "deez-nuts.opus",
+        "roast-laugh": "flipagram-roast-laugh.opus",
+        "freesh": "fr-e-sh-a-voca-d-o-vine.opus",
+        "nap": "gonna-take-a-nap.opus",
+        "skinny-p": "haha-aye-its-ya-boii-skinny-penis.opus",
+        "milk": "he-needs-some-milk.opus",
+        "hell-naw": "hell-no.opus",
+        "hit-or-miss": "hit-or-miss-distorted.opus",
+        "how-could-this": "how-could-this-happen-to-me.opus",
+        "illuminati-confirmed": "illuminati-confirmed.opus",
+        "interior-crocodile-alligator": "interior-crocodile-alligator.opus",
+        "wednesday": "it-is-wednesday-my-dudes.opus",
+        "race-cars": "race-cars-dont-need-headlights-because-the-track-is-always-lit.opus",
+        "suh": "suh-dude.opus",
+        "supa-hot": "supa-hot-fire.opus",
+        "uhhhh": "uhhhhh.opus",
+        "what-are-those": "what-are-those.opus",
+        "what-is-up": "what-the-fuck-is-up-dude-vine.opus",
+        "whoever-threw": "whoever-threw-taht-paper-u-moms-a-hoe.opus",
+        "whos-that-pokemon": "whos-that-pokemon-its-pikachu-vine.opus",
+        "why-you-always-lying": "why-you-always-lying.opus",
+        "goat-scream": "yealing-goats.opus"
     }
   }
 }
