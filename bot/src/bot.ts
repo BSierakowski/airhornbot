@@ -48,6 +48,7 @@ export class AirhornBot {
     this.registerCommand(new AirhornCommand("random"));
     this.registerCommand(new AirhornMetaCommand());
     this.registerCommand(new SoundboardCommand());
+    this.registerCommand(new RouletteCommand());
     // Register the buttons
     this.registerButton(new PlayButton());
   }

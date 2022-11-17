@@ -101,16 +101,6 @@
         "Quack-spam": "quackspam.ogg"
       }
     },
-    "roulette": {
-      "name": "Roulette",
-      "description": "roulette",
-      "emoji": "34039c067d82e86f0f1a07ad38e86685",
-      "variants": {
-        "default": "duck_quack.opus",
-        "duck": "duck_quack.opus",
-        "ttfaf": "ttfaf.ogg"
-      }
-    },
     "aussie": {
       "name": "Aussie",
       "description": "Naur",
