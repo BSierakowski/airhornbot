@@ -48,10 +48,9 @@ export class SoundboardCommand extends DiscordCommand {
     }
     const buttons: DiscordComponent[] = [];
     const soundVariantNames = soundVariants.get(sound) || [];
-    console.log(`soundVariantNames: ${soundVariantNames},  ${soundVariantNames.length}`);
 
     for (let i = 0; i < soundVariantNames.length; i++) {
-      console.log(soundVariantNames[i]);
+      console.log(`sound added: ${sound}, ${soundVariantNames[i]}, ${soundVariantNames[i].toLowerCase()}`);
       buttons.push({
         type: 2,
         style: 1,
@@ -62,7 +61,6 @@ export class SoundboardCommand extends DiscordCommand {
           soundVariant: soundVariantNames[i].toLowerCase()
         })
       });
-      console.log(`buttons: ${buttons}`);
     }
     buttons.push({
       type: 2,

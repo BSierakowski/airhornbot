@@ -42,10 +42,9 @@ export class MegaSoundboardCommand extends DiscordCommand {
 
     for (let i = 0; i < includedSounds.length; i++) {
       var soundVariantNames = soundVariants.get(includedSounds[i]);
-      console.log(`soundVariantNames: ${soundVariantNames}`);
 
       for (let i = 0; i < soundVariantNames.length; i++) {
-        console.log(`soundVariantNames[i]: ${soundVariantNames[i]}`);
+        console.log(`sound added: ${includedSounds[i]}, ${soundVariantNames[i].toLowerCase()}`);
         buttons.push({
           type: 2,
           style: 1,
