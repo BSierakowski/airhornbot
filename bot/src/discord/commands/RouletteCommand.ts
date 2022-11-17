@@ -75,11 +75,11 @@ export class RouletteCommand extends DiscordCommand {
     //   return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
     // }
 
-    if (randomNumber <5 ) {
-      return discordCommandResponder.sendBackMessage("You rolled less than 6!", true);
+    if (randomNumber <6 ) {
+      return discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true);
     }
     else {
-      return discordCommandResponder.sendBackMessage("You rolled a 6!", true);
+      return discordCommandResponder.sendBackMessage("You rolled a 6!!!", true);
     }
 
   //   discordCommandResponder.sendBackMessage("Dispatching sound...", true, [
