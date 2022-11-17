@@ -81,7 +81,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
 
 
     console.log(`soundVariantNames: ${soundVariantNames},  ${soundVariantNames.length}`);
-    console.log(`soundEntries: ${soundEntries});
+    console.log(`soundEntries: ${soundEntries}`);
     for (let i = 0; i < soundVariantNames.length; i++) {
       console.log(soundVariantNames[i]);
       buttons.push({
