@@ -39,76 +39,24 @@ const guildId = specifiedCommandArgs[1] || undefined;
       [key: string]: string
     }
   }]) => {
-    console.log("sound");
-    console.log(sound);
-    console.log("sound[1].name");
-    console.log(sound[1].name);
-
-    if (sound[1].name == "Roulette") {
-      var space = Math.random(5);
-
-      if (space < 6) {
-        return {
-          name: sound[0],
-          description: sound[1].name + ": " + sound[1].description,
-          options: [
-            {
-              name: "variant",
-              description: "Spice it up with some different sounds!",
-              required: false,
-              type: 3,
-              choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
-                return {
-                  name: soundVariant[0],
-                  value: soundVariant[0].toLowerCase()
-                };
-              })
-            }
-          ]
-        };
-      }
-
-      else {
-        return {
-          name: sound[0],
-          description: sound[1].name + ": " + sound[1].description,
-          options: [
-            {
-              name: "variant",
-              description: "Spice it up with some different sounds!",
-              required: false,
-              type: 3,
-              choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
-                return {
-                  name: soundVariant[0],
-                  value: soundVariant[0].toLowerCase()
-                };
-              })
-            }
-          ]
-        };
-      }
-    }
-    else {
-      return {
-        name: sound[0],
-        description: sound[1].name + ": " + sound[1].description,
-        options: [
-          {
-            name: "variant",
-            description: "Spice it up with some different sounds!",
-            required: false,
-            type: 3,
-            choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
-              return {
-                name: soundVariant[0],
-                value: soundVariant[0].toLowerCase()
-              };
-            })
-          }
-        ]
-      };
-    }
+    return {
+      name: sound[0],
+      description: sound[1].name + ": " + sound[1].description,
+      options: [
+        {
+          name: "variant",
+          description: "Spice it up with some different sounds!",
+          required: false,
+          type: 3,
+          choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
+            return {
+              name: soundVariant[0],
+              value: soundVariant[0].toLowerCase()
+            };
+          })
+        }
+      ]
+    };
   });
 
   // soundboard command

@@ -91,7 +91,30 @@ export class AirhornCommand extends DiscordCommand {
       }
     ]);
     console.log(sound.sound, sound.variant, sound.variantFile);
-    trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
+
+    if (sound.sound == "roulette") {
+      var space = Math.random(5);
+
+      if (space < 5) {
+        sound.sound = "roulette"
+        sound.variant = "duck"
+        sound.variantFile = "roulette/duck_quack.opus"
+
+        trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
+      }
+      else {
+        sound.sound = "roulette"
+        sound.variant = "ttfaf"
+        sound.variantFile = "roulette/ttfaf.ogg"
+
+        trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
+      }
+
+    }
+    else {
+      trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
+    }
+
 
     // Dispatch the sound
     enqueueSound(voiceChannel, sound.variantFile);
