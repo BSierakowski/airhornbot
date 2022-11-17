@@ -7,13 +7,7 @@
       "name": "Airhorn",
       "description": "The classic airhorn.",
       "variants": {
-        "Default": "airhorn_default.ogg"
-      }
-    },
-    "morehorn": {
-      "name": "More Horn",
-      "description": "What is better than one airhorn? More airhorns!",
-      "variants": {
+        "Default": "airhorn_default.ogg",
         "Clown Short": "airhorn_clownshort.ogg",
         "Clown Spam": "airhorn_clownspam.ogg",
         "Distant": "airhorn_distant.ogg",
@@ -28,32 +22,30 @@
         "Truck": "airhorn_truck.ogg"
       }
     },
-    "among": {
+    "video-games": {
       "name": "Among Us",
       "description": "That's a little sus...",
       "emoji": "847131936845725696",
       "variants": {
-        "Kill": "among_kill.ogg",
-        "Meeting": "among_meeting.ogg",
-        "Report": "among_report.ogg",
-        "Role": "among_role.ogg",
-        "Vent": "among_vent.ogg"
+        "amongus-Kill": "among_kill.ogg",
+        "amongus-Meeting": "among_meeting.ogg",
+        "amongus-Report": "among_report.ogg",
+        "amongus-Role": "among_role.ogg",
+        "amongus-Vent": "among_vent.ogg",
+        "AOE": "aoe.ogg",
+        "villager-accept": "villager_accept.ogg",
+        "villager-deny": "villager_deny.ogg",
+        "villager-idle": "villager_idle.ogg",
+        "villager-trade": "villager_trade.ogg"
       }
     },
-    "aoe": {
-      "name": "AOE",
-      "description": "Age of Empires",
-      "emoji": "847140709537546282",
-      "variants": {
-        "AOE": "aoe.ogg"
-      }
-    },
-    "wow": {
+    "reactions": {
       "name": "Wow",
       "description": "Wow!",
       "emoji": "847141775188688966",
       "variants": {
-        "Owen Wilson": "owen_wilson.ogg"
+        "wow": "owen_wilson.ogg"
+        "Gavel": "gavel.opus"
       }
     },
     "instruments": {
@@ -63,22 +55,6 @@
       "variants": {
         "Vuvuzela": "vuvuzela.ogg",
         "Didgeridoo": "didgeridoo.ogg"
-      }
-    },
-    "humanman": {
-      "name": "Human Man",
-      "description": "I won't let you get away with this!",
-      "emoji": "847138944222625802",
-      "variants": {
-        "Human Man": "human_man.ogg"
-      }
-    },
-    "robotman": {
-      "name": "Robot Man",
-      "description": "You'll never defeat me!",
-      "emoji": "847138943849988128",
-      "variants": {
-        "Robot Man": "robot_man.ogg"
       }
     },
     "stan": {
@@ -114,14 +90,6 @@
         "Echo": "another_one_echo.ogg"
       }
     },
-    "gavel": {
-      "name": "Gavel",
-      "description": "Order in the court!",
-      "emoji": "847138946446000158",
-      "variants": {
-        "Gavel": "gavel.opus"
-      }
-    },
     "quack": {
       "name": "Quack",
       "description": "Quack, quack, quack",
@@ -130,15 +98,14 @@
         "Quack": "duck_quack.opus"
       }
     },
-    "villager": {
-      "name": "Minecraft Villager",
-      "description": "Hrmmm",
-      "emoji": "847138944302055455",
+    "roulette": {
+      "name": "Roulette",
+      "description": "roulette",
+      "emoji": "847138944264044554",
       "variants": {
-        "accept": "villager_accept.ogg",
-        "deny": "villager_deny.ogg",
-        "idle": "villager_idle.ogg",
-        "trade": "villager_trade.ogg"
+        "default": "duck_quack.opus",
+        "duck": "duck_quack.opus",
+        "ttfaf": "ttfaf.opus",
       }
     },
     "aussie": {
@@ -172,7 +139,8 @@
         "p-here-comes": "pat-here-comes.ogg",
         "p-this-is-patrick": "pat-no-this-is-patrick.ogg",
         "p-whats-that": "pat-whats-that.ogg",
-        "goodmood": "d-goodmood.ogg"
+        "good-mood": "d-goodmood.ogg",
+        "muffin-man": "muffin-man.ogg"
       }
     },
     "birthday": {
