@@ -95,6 +95,7 @@
       "description": "Quack, quack, quack",
       "emoji": "847138944264044554",
       "variants": {
+        "default": "duck_quack.opus",
         "Quack": "duck_quack.opus",
         "Quack-chaos": "quackchaos.ogg",
         "Quack-spam": "quackspam.ogg"
@@ -103,7 +104,7 @@
     "roulette": {
       "name": "Roulette",
       "description": "roulette",
-      "emoji": "847138944264044554",
+      "emoji": "34039c067d82e86f0f1a07ad38e86685",
       "variants": {
         "default": "duck_quack.opus",
         "duck": "duck_quack.opus",
