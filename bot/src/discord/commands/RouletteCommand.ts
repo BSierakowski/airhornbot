@@ -101,6 +101,7 @@ export class RouletteCommand extends DiscordCommand {
         }
       ]);
 
+      console.log(`Playing ${sound.sound}, ${sound.variant}`)
       // Don't await this, play the sound ASAP
       trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 
@@ -133,6 +134,7 @@ export class RouletteCommand extends DiscordCommand {
         }
       ]);
 
+      console.log(`Playing ${sound.sound}, ${sound.variant}`)
       // Don't await this, play the sound ASAP
       trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 
