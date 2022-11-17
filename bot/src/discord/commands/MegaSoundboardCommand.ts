@@ -37,9 +37,9 @@ export class MegaSoundboardCommand extends DiscordCommand {
     }
 
     const buttons: DiscordComponent[] = [];
-    const includedSounds = ["aussie", "clogg"];
+    const includedSounds = ["aussie", "clogg", "airhorn", "reactions", "quack", "trombone", "comms"];
     var soundVariantNames = [];
-    var i = 0; 
+    var i = 0;
 
     for (var i = 0; i < includedSounds.length; i++) {
       var soundVariantNames = soundVariants.get(includedSounds[i]);
@@ -60,35 +60,6 @@ export class MegaSoundboardCommand extends DiscordCommand {
         }
       )
     }
-
-
-    // Object.entries(config.sounds).map((sound: [string, {
-    //   name: string,
-    //   description: string,
-    //   emoji: string | undefined,
-    //   variants: {
-    //     [key: string]: string
-    //   }
-    // }]) => {
-    //   var soundVariantNames = soundVariants.get(sound[0]) || [];
-    //   console.log(`soundVariantNames: ${soundVariantNames}`);
-    //
-    //   for (let i = 0; i < soundVariantNames.length; i++) {
-    //     console.log(`soundVariantNames[i]: ${soundVariantNames[i]}`);
-    //     buttons.push({
-    //       type: 2,
-    //       style: 1,
-    //       label: soundVariantNames[i],
-    //       custom_id: JSON.stringify({
-    //         name: "play",
-    //         soundName: sound,
-    //         soundVariant: soundVariantNames[i].toLowerCase()
-    //       })
-    //     });
-    //
-    //     console.log(`buttons: ${buttons}`);
-    //   }
-    // }
 
     // buttons.push({
     //   type: 2,
