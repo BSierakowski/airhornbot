@@ -50,6 +50,8 @@ export class MegaSoundboardCommand extends DiscordCommand {
     }]) => {
       var soundVariantNames = soundVariants.get(sound) || [];
       console.log(`sound: ${sound}`);
+      console.log(`soundName: ${sound[name]}`);
+      console.log(`soundName2: ${sound[0]}`);
       console.log(`soundVariantNames: ${soundVariantNames}`);
 
       for (let i = 0; i < soundVariantNames.length; i++) {
