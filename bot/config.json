@@ -23,8 +23,8 @@
       }
     },
     "videogames": {
-      "name": "Among Us",
-      "description": "That's a little sus...",
+      "name": "Video Games",
+      "description": "Any gamers in the house?",
       "emoji": "847131936845725696",
       "variants": {
         "amongus-Kill": "among_kill.ogg",
@@ -40,7 +40,7 @@
       }
     },
     "reactions": {
-      "name": "Wow",
+      "name": "Reactions",
       "description": "Wow!",
       "emoji": "847141775188688966",
       "variants": {
