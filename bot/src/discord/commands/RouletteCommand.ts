@@ -75,7 +75,9 @@ export class RouletteCommand extends DiscordCommand {
     //   return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
     // }
 
+    console.log(`randomNumber < 6: ${randomNumber < 6}`);
     if (randomNumber < 6 ) {
+      console.log("if");
       var sound = quack;
 
       discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true, [
@@ -109,7 +111,8 @@ export class RouletteCommand extends DiscordCommand {
       enqueueSound(voiceChannel, sound.variantFile);
     }
     else {
-      var sound = quack;
+      console.log("else");
+      var sound = ttfaf;
 
       discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true, [
         {
