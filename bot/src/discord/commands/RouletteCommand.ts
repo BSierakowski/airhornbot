@@ -77,37 +77,67 @@ export class RouletteCommand extends DiscordCommand {
 
     if (randomNumber < 6 ) {
       var sound = quack;
+
+      discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true, [
+        {
+          type: 1,
+          components: [
+            {
+              type: 2,
+              style: 2,
+              label: "Replay",
+              custom_id: JSON.stringify({
+                name: "play",
+                soundName: sound.sound,
+                soundVariant: sound.variant
+              }),
+              emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
+                id: String(config.sounds[this.name].emoji)
+              } : {
+                id: String(configSecrets.discord.emojis.airhorn)
+              }
+            }
+          ]
+        }
+      ]);
+
+      // Don't await this, play the sound ASAP
+      trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
+
+      // Dispatch the sound
+      enqueueSound(voiceChannel, sound.variantFile);
     }
     else {
-      var sound = ttfaf;
-    }
+      var sound = quack;
 
-    discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true, [
-      {
-        type: 1,
-        components: [
-          {
-            type: 2,
-            style: 2,
-            label: "Replay",
-            custom_id: JSON.stringify({
-              name: "play",
-              soundName: sound.sound,
-              soundVariant: sound.variant
-            }),
-            emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
-              id: String(config.sounds[this.name].emoji)
-            } : {
-              id: String(configSecrets.discord.emojis.airhorn)
+      discordCommandResponder.sendBackMessage(`You rolled a ${ randomNumber }!`, true, [
+        {
+          type: 1,
+          components: [
+            {
+              type: 2,
+              style: 2,
+              label: "Replay",
+              custom_id: JSON.stringify({
+                name: "play",
+                soundName: sound.sound,
+                soundVariant: sound.variant
+              }),
+              emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
+                id: String(config.sounds[this.name].emoji)
+              } : {
+                id: String(configSecrets.discord.emojis.airhorn)
+              }
             }
-          }
-        ]
-      }
-    ]);
+          ]
+        }
+      ]);
 
-  // Don't await this, play the sound ASAP
-  trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
+      // Don't await this, play the sound ASAP
+      trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
 
-  // Dispatch the sound
-  enqueueSound(voiceChannel, sound.variantFile);
+      // Dispatch the sound
+      enqueueSound(voiceChannel, sound.variantFile);
+    }
+  }
 }
