@@ -62,6 +62,7 @@ export class SoundboardCommand extends DiscordCommand {
           soundVariant: soundVariantNames[i].toLowerCase()
         })
       });
+      console.log(`buttons: ${buttons}`);
     }
     buttons.push({
       type: 2,

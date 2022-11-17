@@ -37,6 +37,7 @@ export class MegaSoundboardCommand extends DiscordCommand {
     }
 
     const buttons: DiscordComponent[] = [];
+    var soundVariantNames = soundVariants.get(sound) || [];
 
     Object.entries(config.sounds).map((sound: [string, {
       name: string,
@@ -61,6 +62,8 @@ export class MegaSoundboardCommand extends DiscordCommand {
             soundVariant: soundVariantNames[i].toLowerCase()
           })
         });
+
+        console.log(`buttons: ${buttons}`);
       }
     }
 
