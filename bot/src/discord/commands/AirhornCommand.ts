@@ -80,7 +80,7 @@ export class AirhornCommand extends DiscordCommand {
       console.log(this.name);
       console.log("soundVariant");
       console.log(soundVariant);
-      const sound = getSound(this.name, soundVariant);
+      var sound = getSound(this.name, soundVariant);
     }
 
 
