@@ -35,57 +35,16 @@ export class MegaSoundboardCommand extends DiscordCommand {
     if (!botGuildMember) {
       return discordCommandResponder.sendBackMessage("The bot was not found in the guild.", false);
     }
-    // Run the command
-    // let sound: "string | undefined;"
-    // if (interaction.data.options) {
-    //   interaction.data.options.forEach((option: InteractionCommandOption) => {
-    //     if (option.name === "sound") {
-    //       sound = String(option.value).toLowerCase();
-    //     }
-    //   });
-    // }
-    // if (!sound || !soundVariants.has(sound)) {
-    //   return discordCommandResponder.sendBackMessage("The sound specified was not found.", false);
-    // }
 
-    var sound = "aussie"
     const buttons: DiscordComponent[] = [];
-    const soundEntries = config.sounds.keys;
-    // Object.entries(config.sounds).map((sound: [string, {
-    //   name: string,
-    //   description: string,
-    //   emoji: string | undefined,
-    //   variants: {
-    //     [key: string]: string
-    //   }
-    // }]) => {
-    //   return {
-    //     name: sound[0],
-    //     description: sound[1].name + ": " + sound[1].description,
-    //     options: [
-    //       {
-    //         name: "variant",
-    //         description: "Spice it up with some different sounds!",
-    //         required: false,
-    //         type: 3,
-    //         choices: Object.entries(sound[1].variants).map((soundVariant: [string, string]) => {
-    //           return {
-    //             name: soundVariant[0],
-    //             value: soundVariant[0].toLowerCase()
-    //           };
-    //         })
-    //       }
-    //     ]
-    //   };
-    // });
-
+    const soundEntries = Object.keys(config.sounds);
 
     console.log(`soundVariantNames: ${soundVariantNames},  ${soundVariantNames.length}`);
     console.log(`soundEntries: ${soundEntries}`);
 
     for (let i = 0; i < soundEntries.length; i++) {
       var soundVariantNames = soundVariants.get(soundEntries[i]) || [];
-    }
+
       for (let i = 0; i < soundVariantNames.length; i++) {
         console.log(soundVariantNames[i]);
         buttons.push({
@@ -108,6 +67,8 @@ export class MegaSoundboardCommand extends DiscordCommand {
           soundName: sound
         })
       });
+    }
+
     const fullComponents = convertButtonsIntoButtonGrid(buttons);
     return discordCommandResponder.sendBackMessage("Here's the menu for that sound.", true, fullComponents);
   }
