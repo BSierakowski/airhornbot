@@ -69,97 +69,100 @@ export class AirhornCommand extends DiscordCommand {
     }
 
     if (sound.sound == "roulette") {
-      var space = Math.random(5);
+      var min = Math.ceil(1);
+      var max = Math.floor(6);
+      var space = Math.floor(Math.random() * (max - min + 1) + min);
       console.log("space");
       console.log(space);
 
-      if (space < 5) {
-        console.log("space less than 5");
-        const sound = getSound("quack", "quack");
-
-        discordCommandResponder.sendBackMessage(`You rolled ${space + 1}!`, true, [
-          {
-            type: 1,
-            components: [
-              {
-                type: 2,
-                style: 2,
-                label: "Replay",
-                custom_id: JSON.stringify({
-                  name: "play",
-                  soundName: sound.sound,
-                  soundVariant: sound.variant
-                }),
-                emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
-                  id: String(config.sounds[this.name].emoji)
-                } : {
-                  id: String(configSecrets.discord.emojis.airhorn)
-                }
-              }
-            ]
-          }
-        ]);
-      }
-      else {
-        const sound = getSound("trombone", "ttfaf");
-        console.log("Else! 5!");
-
-        discordCommandResponder.sendBackMessage(`You rolled ${space + 1}!`, true, [
-          {
-            type: 1,
-            components: [
-              {
-                type: 2,
-                style: 2,
-                label: "Replay",
-                custom_id: JSON.stringify({
-                  name: "play",
-                  soundName: sound.sound,
-                  soundVariant: sound.variant
-                }),
-                emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
-                  id: String(config.sounds[this.name].emoji)
-                } : {
-                  id: String(configSecrets.discord.emojis.airhorn)
-                }
-              }
-            ]
-          }
-        ]);
-      }
-    }
-    else {
-      console.log("big else");
-      discordCommandResponder.sendBackMessage("Dispatching sound...", true, [
+      if (space < 5)
         {
-          type: 1,
-          components: [
+          console.log("space less than 5");
+          const sound = getSound("quack", "quack");
+          var responseMessage = `You rolled ${space}!`
+
+          discordCommandResponder.sendBackMessage(responseMessage, true, [
             {
-              type: 2,
-              style: 2,
-              label: "Replay",
-              custom_id: JSON.stringify({
-                name: "play",
-                soundName: sound.sound,
-                soundVariant: sound.variant
-              }),
-              emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
-                id: String(config.sounds[this.name].emoji)
-              } : {
-                id: String(configSecrets.discord.emojis.airhorn)
-              }
+              type: 1,
+              components: [
+                {
+                  type: 2,
+                  style: 2,
+                  label: "Replay",
+                  custom_id: JSON.stringify({
+                    name: "play",
+                    soundName: sound.sound,
+                    soundVariant: sound.variant
+                  }),
+                  emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
+                    id: String(config.sounds[this.name].emoji)
+                  } : {
+                    id: String(configSecrets.discord.emojis.airhorn)
+                  }
+                }
+              ]
             }
-          ]
+          ]);
         }
-      ]);
-    }
+      else
+        {
+          const sound = getSound("trombone", "ttfaf");
+          console.log("Else! 5!");
+          var responseMessage = `You rolled ${space}!`
+
+          discordCommandResponder.sendBackMessage(responseMessage, true, [
+            {
+              type: 1,
+              components: [
+                {
+                  type: 2,
+                  style: 2,
+                  label: "Replay",
+                  custom_id: JSON.stringify({
+                    name: "play",
+                    soundName: sound.sound,
+                    soundVariant: sound.variant
+                  }),
+                  emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
+                    id: String(config.sounds[this.name].emoji)
+                  } : {
+                    id: String(configSecrets.discord.emojis.airhorn)
+                  }
+                }
+              ]
+            }
+          ]);
+        }
+      }
+    else
+      {
+        console.log("big else");
+        discordCommandResponder.sendBackMessage("Dispatching sound...", true, [
+          {
+            type: 1,
+            components: [
+              {
+                type: 2,
+                style: 2,
+                label: "Replay",
+                custom_id: JSON.stringify({
+                  name: "play",
+                  soundName: sound.sound,
+                  soundVariant: sound.variant
+                }),
+                emoji: (config.sounds[this.name] !== undefined && config.sounds[this.name].emoji) ? {
+                  id: String(config.sounds[this.name].emoji)
+                } : {
+                  id: String(configSecrets.discord.emojis.airhorn)
+                }
+              }
+            ]
+          }
+        ]);
+      }
 
     // Don't await this, play the sound ASAP
-
-
-
     trackPlay(guild.id, voiceChannel.id, guildMember.id, sound.sound);
-
 
     // Dispatch the sound
     enqueueSound(voiceChannel, sound.variantFile);
