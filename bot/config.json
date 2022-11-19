@@ -236,6 +236,34 @@
         "whos-that-pokemon": "whos-that-pokemon-its-pikachu-vine.opus",
         "why-you-always-lying": "why-you-always-lying.opus",
         "goat-scream": "yealing-goats.opus"
+      },
+    "halo": {
+      "name": "Halo",
+      "description": "The dulcet tones of Jeff Steitzer",
+      "emoji": "d9c6360fe725a4054969f2b59506dc0d",
+      "variants": {
+        "based-liberal": "based-liberal.opus",
+        "deez-nuts": "deez-nuts.opus",
+        "double-kill": "double-kill.opus",
+        "kill-a-man-jaro": "kill-a-man-jaro.opus",
+        "killing-frenzy": "killing-frenzy.opus",
+        "killing-spree": "killing-spree.opus",
+        "mommy-milkers": "mommy-milkers.opus",
+        "no-maidens-1": "No-Maidens-1.opus",
+        "no-maidens-2": "No-Maidens-2.opus",
+        "no-maidens-3": "No-Maidens-3.opus",
+        "no-maidens-chorus": "no-maidens-chorus.opus",
+        "notice-me-senpai": "notice-me-senpai.opus",
+        "overkill": "overkill.opus",
+        "redditor": "redditor.opus",
+        "skill-issue-1": "Skill-issue-1.opus",
+        "skill-issue-2": "Skill-issue-2.opus",
+        "skill-issue-3": "Skill-issue-3.opus",
+        "skill-issue-chorus": "Skill-issue-chorus.opus",
+        "slayer": "slayer.opus",
+        "social-credit-deducted": "social-credit-deducted.opus",
+        "triple-kill": "triple-kill.opus",
+        "uh-oh-stinky": "uh-oh-stinky.opus"
       }
     }
   }
