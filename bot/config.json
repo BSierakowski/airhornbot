@@ -45,7 +45,8 @@
       "emoji": "847141775188688966",
       "variants": {
         "wow": "wow.ogg",
-        "Gavel": "gavel.opus"
+        "Gavel": "gavel.opus",
+        "watdafak-hehe": "nl-watdafak-hehe.opus"
       }
     },
     "instruments": {
@@ -135,7 +136,8 @@
         "charlie-narshlog": "charlie-narshlog.opus",
         "dookie": "dookie.opus",
         "nyack": "nyack.opus",
-        "tirl": "tirl.opus"
+        "tirl": "tirl.opus",
+        "nick-seinfeld": "nick-do-seinfeld.opus"
       }
     },
     "clogg-david": {
