@@ -303,6 +303,32 @@
         "yoinky-sploinky-1": "yoinky-sploinky-1.opus",
         "yoinky-sploinky-2": "yoinky-sploinky-2.opus"
       }
+    },
+    "halo-mam": {
+      "name": "Halo Mix and Match",
+      "description": "Make your own halo sentences!",
+      "emoji": "d9c6360fe725a4054969f2b59506dc0d",
+      "variants": {
+        "amazing-1.opus": "amazing-1.opus",
+        "amazing-2.opus": "amazing-2.opus",
+        "awesome-1.opus": "awesome-1.opus",
+        "awesome-2.opus": "awesome-2.opus",
+        "brian-1.opus": "brian-1.opus",
+        "cute-1.opus": "cute-1.opus",
+        "cute-2.opus": "cute-2.opus",
+        "david-1.opus": "david-1.opus",
+        "david-2.opus": "david-2.opus",
+        "is-1.opus": "is-1.opus",
+        "is-2.opus": "is-2.opus",
+        "patrick-1.opus": "patrick-1.opus",
+        "patrick-2.opus": "patrick-2.opus",
+        "powerful-1.opus": "powerful-1.opus",
+        "powerful-2.opus": "powerful-2.opus",
+        "rain-1.opus": "rain-1.opus",
+        "rain-2.opus": "rain-2.opus",
+        "zilch-1.opus": "zilch-1.opus",
+        "zilch-2.opus": "zilch-2.opus"
+      }
     }
   }
 }
