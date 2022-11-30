@@ -263,11 +263,13 @@
     },
     "halo-custom": {
       "name": "Halo Custom Voice Lines",
-      "description": "The dulcet tones of Jeff Steitzer",
+      "description": "Custom Halo voicelines from around the web",
       "emoji": "d9c6360fe725a4054969f2b59506dc0d",
       "variants": {
+        "always-be-un-fricken-believable": "always-be-un-fricken-believable.opus",
         "based-liberal": "based-liberal.opus",
         "deez-nuts": "deez-nuts.opus",
+        "hey-there": "hey-there.opus",
         "mommy-milkers": "mommy-milkers.opus",
         "no-maidens-1": "No-Maidens-1.opus",
         "no-maidens-2": "No-Maidens-2.opus",
@@ -281,6 +283,25 @@
         "skill-issue-chorus": "Skill-issue-chorus.opus",
         "social-credit-deducted": "social-credit-deducted.opus",
         "uh-oh-stinky": "uh-oh-stinky.opus"
+      }
+    },
+    "halo-clogg": {
+      "name": "Halo Clogg Memes",
+      "description": "Halo memes just for you and mes",
+      "emoji": "d9c6360fe725a4054969f2b59506dc0d",
+      "variants": {
+        "airhorn-1": "airhorn.opus",
+        "airhorn-2": "airhorn-2.opus",
+        "aur-naur-2": "aur-naur-2.opus",
+        "aur-naur-1": "aur-naur-1.opus",
+        "aur-naur-spam": "aur-naur-spam.opus",
+        "i-apologize": "i-apologize.opus",
+        "jambalaya-1": "jambalaya-1.opus",
+        "jambalaya-2": "jambalaya-2.opus",
+        "whats-the-matter-buddy-1": "whats-the-matter-buddy-1.opus",
+        "whats-the-matter-buddy-2": "whats-the-matter-buddy-2.opus",
+        "yoinky-sploinky-1": "yoinky-sploinky-1.opus",
+        "yoinky-sploinky-2": "yoinky-sploinky-2.opus"
       }
     }
   }
